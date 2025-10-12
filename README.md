@@ -42,17 +42,6 @@
 │  ├─ event/                # 講演・ワークショップ・ハッカソンなどの事例
 │  └─ _template/            # 新規事例用テンプレート
 │
-├─ tools/                   # 検証・補助スクリプト
-│  ├─ validate_metadata.py
-│  ├─ check_links.py
-│  ├─ generate_index.py
-│  ├─ schema/
-│  └─ templates/
-│
-├─ .github/                 # GitHub 用設定
-│  ├─ ISSUE_TEMPLATE/
-│  └─ PULL_REQUEST_TEMPLATE.md
-│
 ├─ CASE_INDEX.md            # 自動生成される全事例一覧
 ├─ requirements_book.txt    # 書籍で用いられるライブラリ
 ├─ README.md                # このファイル
@@ -102,7 +91,7 @@ casebook/
 ```
 
 > 詳細な投稿ルール・チェックリスト・スクリプトの使い方は
-> [`CONTRIBUTING.md`](.github/CONTRIBUTING.md) を参照してください。
+> [`CONTRIBUTING.md`](https://github.com/python-opendata-analysis/opendata-casebook/blob/main/CONTRIBUTING.md) を参照してください。
 
 note / Zenn / Qiita などの外部記事のリンクのみを紹介する場合は、Issue を作成してください。
 運営側が内容を確認のうえ登録します。
