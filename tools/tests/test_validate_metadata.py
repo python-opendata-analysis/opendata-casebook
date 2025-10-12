@@ -25,7 +25,6 @@ def valid_meta(domain="household", slug="202510-well-living-kakei"):  # 著者�
             }
         ],
         "code_license": "MIT",
-        "language": "ja",
         "links": [{"label": "note", "url": "https://note.com/example"}],
         "description": "短い説明",
         "tags": ["household", "CPI"]

@@ -30,7 +30,6 @@ data_sources:
     url: "http://stat.go.jp/data/kakei/index.htm"
     terms_of_use: "see http://stat.go.jp/info/riyou.html"
 code_license: "MIT"
-language: "ja"
 """,
         encoding="utf-8"
     )

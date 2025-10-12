@@ -15,7 +15,6 @@ code_license: "MIT"
 # notebook_license: "CC BY 4.0"   # 任意（Notebook本文・解説を含む場合）
 
 links: []               # 例: [{label: "note", url: "https://..." }]
-language: "ja"
 
 # 任意（一覧・検索向けの2〜3行）
 description: >

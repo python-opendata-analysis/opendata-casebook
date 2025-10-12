@@ -23,8 +23,7 @@ def test_generate_index_orders_by_date_desc(tmp_path):
             "domain": "household",
             "slug": "202401-someone-a",
             "data_sources": [{"name": "n", "provider": "p", "url": "https://example.org", "terms_of_use": "x"}],
-            "code_license": "MIT",
-            "language": "ja"
+            "code_license": "MIT"
         }, allow_unicode=True, sort_keys=False),
         encoding="utf-8"
     )
@@ -37,8 +36,7 @@ def test_generate_index_orders_by_date_desc(tmp_path):
             "domain": "economy",
             "slug": "202510-someone-b",
             "data_sources": [{"name": "n", "provider": "p", "url": "https://example.net", "terms_of_use": "y"}],
-            "code_license": "MIT",
-            "language": "ja"
+            "code_license": "MIT"
         }, allow_unicode=True, sort_keys=False),
         encoding="utf-8"
     )
