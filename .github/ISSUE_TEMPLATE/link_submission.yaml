@@ -1,106 +1,73 @@
-name: "🔗 Link submission (記事・外部リンクの紹介)"
-description: "note / Zenn / Qiita などの外部記事や分析事例リンクを紹介するテンプレート"
-title: "Add link: <title or brief topic>"
-labels:
-  - "link submission"
-  - "triage"
-assignees: []
+name: "🔗 リンク紹介（外部記事・事例）"
+description: "note / Zenn / Qiita などの外部記事や事例を紹介します"
+title: "[Link]: "
+labels: ["link", "submission"]
 
 body:
   - type: markdown
     attributes:
       value: |
-        ✨ 外部記事・分析事例のリンクを共有いただきありがとうございます。  
-        CODEOWNERS（運営チーム）が確認のうえ、適切な場所に追加します。
+        ## 💡 リンク紹介について
+        公開済みの外部記事やデータ分析事例を紹介できます。  
+        紹介された記事は内容を確認のうえ、`casebook/` の関連分野に登録されます。
 
-        ⚠️ **注意:**  
-        - Notebook やコードを直接アップロードしないでください。  
-        - 紹介する記事やリンクの内容は、利用規約・著作権に従って公開されているものに限ります。  
+        **リンクURL は必須です。**  
+        **記事タイトル / テーマは、リンク先にタイトルがない場合のみ記入してください。**  
+        **Data sources（出典・統計データ）は必須です。**
+
+  - type: input
+    id: link
+    attributes:
+      label: "🔗 リンクURL（必須）"
+      description: "note / Zenn / Qiita / 個人ブログ などのURLを記載してください。"
+      placeholder: "https://example.com/your-article"
+    validations:
+      required: true
 
   - type: input
     id: title
     attributes:
-      label: "記事タイトル / テーマ"
-      description: "note / Zenn などのページタイトル、または内容を簡潔に記載してください。"
-      placeholder: "例: 家計調査と物価統計を比較してみた"
+      label: "📝 記事タイトル / テーマ（任意）"
+      description: "リンク先にタイトルがない場合には入力してください。"
+      placeholder: "例：オープンデータで見る地域経済の変化"
+    validations:
+      required: false
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: "📖 概要（任意）"
+      description: "記事や事例の簡単な内容説明を記載してください。"
+      placeholder: "例：政府統計（e-Stat）を活用し、都道府県別のCPI動向を可視化した記事です。"
+    validations:
+      required: false
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: "📊 Data sources（出典・統計データ）"
+      description: "使用している統計データ・出典・APIなどを記載してください。"
+      placeholder: |
+        例：
+        - 総務省統計局「家計調査」
+        - e-Stat API（https://api.e-stat.go.jp/）
     validations:
       required: true
 
   - type: input
     id: domain
     attributes:
-      label: "Domain（分野・区分）"
-      description: "関連するカテゴリ名を記載してください。複数ある場合はカンマ区切り。"
-      placeholder: "例: household, economy"
-    validations:
-      required: true
-
-  - type: input
-    id: author
-    attributes:
-      label: "Author（著者・投稿者）"
-      description: "記事を書いた方のアカウント名（note / Zenn / Qiita など）。"
-      placeholder: "例: well_living_ry"
-    validations:
-      required: true
-
-  - type: textarea
-    id: links
-    attributes:
-      label: "リンクURL"
-      description: "note / Zenn / Qiita / 書籍など、紹介したいページのURLを記載してください。1 行に 1 件。"
-      placeholder: |
-        - note: https://note.com/...
-        - zenn: https://zenn.dev/...
-        - qiita: https://qiita.com/...
-        - book: https://...
-    validations:
-      required: true
-
-  - type: textarea
-    id: summary
-    attributes:
-      label: "概要（任意）"
-      description: "どのような内容か、どの統計やオープンデータを扱っているかを簡潔に記載してください。"
-      placeholder: "例: 家計調査とCPIを用いて消費支出と物価の関係を可視化。"
+      label: "📁 分野（任意）"
+      description: "関連するテーマや分野を自由に記入してください（例：教育、経済、地域、イベントなど）。"
+      placeholder: "例：地域経済、教育統計、環境データ"
     validations:
       required: false
-
-  - type: textarea
-    id: data_sources
-    attributes:
-      label: "Data sources（出典・統計データ）"
-      description: >
-        紹介する記事で使用されている主な公的統計が分かる場合は記載してください。  
-        正確なURLを記載するか、公式サイト（例: https://www.stat.go.jp/）への一般的な参照でも構いません。
-      render: yaml
-      placeholder: |
-        data_sources:
-          - name: ""
-            provider: ""
-            url: ""
-            notes: >
-              （利用している統計や出典が明記されている場合は概要を記載。）
-    validations:
-      required: false
-
-  - type: checkboxes
-    id: confirmations
-    attributes:
-      label: "確認事項"
-      options:
-        - label: "紹介するリンクの内容が公的データ・オープンデータの活用事例である"
-          required: true
-        - label: "リンク先の著作権・利用規約に違反しないことを確認した"
-          required: true
-        - label: "CODE_OF_CONDUCT.md に同意する"
-          required: true
 
   - type: textarea
     id: notes
     attributes:
-      label: "補足（任意）"
-      description: "運営への補足・要望・注意点などがあれば記載してください。"
-      placeholder: "例）この記事はイベント講演の内容をもとにしています。"
+      label: "🗒️ 補足情報（任意）"
+      description: "記事に関する注意点や関連リンクなどがあれば記載してください。"
+      placeholder: "例：掲載データは2024年版に更新予定です。"
     validations:
       required: false

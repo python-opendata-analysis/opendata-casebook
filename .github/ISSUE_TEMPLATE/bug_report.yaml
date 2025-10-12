@@ -1,62 +1,36 @@
-name: "🐛 Bug Report / 不具合報告"
-description: "既存の事例、テンプレート、ツールなどで発生した不具合を報告するテンプレート"
-title: "Bug: <簡単な概要>"
-labels:
-  - "bug"
-  - "triage"
-assignees: []
+name: "🐛 バグ報告"
+description: "casebook 以外の不具合（スクリプト・ツール等）を報告します"
+title: "[Bug]: "
+labels: ["bug", "infrastructure"]
 
 body:
   - type: markdown
     attributes:
       value: |
-        🐞 不具合の報告ありがとうございます。  
-        CODEOWNERS（運営チーム）が確認のうえ、必要に応じて修正や議論を行います。
+        ## ⚠️ ご注意
+        このテンプレートは **casebook/ ディレクトリ外の不具合報告専用** です。  
+        例：`tools/` 配下のスクリプト、リポジトリ構成、CI、メタデータ検証処理など。  
 
-        ⚠️ **注意:**  
-        - 統計データやファイルを直接アップロードしないでください。  
-        - 再現のために必要な最小限の情報（環境・再現手順など）を記載してください。
+        各事例 (`casebook/` 以下) の Notebook やコードの不具合は、**投稿者の責任** において修正してください。  
+        リポジトリ管理者は、事例コードに関するエラー・依存関係問題・環境依存の不具合に対応しません。  
 
-  - type: dropdown
-    id: category
+        必要に応じて、投稿者自身による修正または Pull Request で改善を提案してください。
+
+  - type: input
+    id: component
     attributes:
-      label: "発生箇所"
-      options:
-        - 事例（casebook）
-        - テンプレート（_template）
-        - ツール（tools）
-        - ドキュメント（README, CONTRIBUTING など）
-        - その他
+      label: "対象ディレクトリまたはスクリプト"
+      description: "例: tools/validate_metadata.py, .github/workflows/build.yml"
+      placeholder: "例: tools/validate_metadata.py"
     validations:
       required: true
-
-  - type: input
-    id: target
-    attributes:
-      label: "該当箇所（任意）"
-      description: "不具合が発生したファイルやディレクトリを記載してください。"
-      placeholder: "例: casebook/household/202510-well_living_ry-kakei-kouri/metadata.yaml"
-    validations:
-      required: false
-
-  - type: input
-    id: domain
-    attributes:
-      label: "関連分野（任意）"
-      description: "特定の分野（casebook 下のカテゴリ）に関係する場合は記載してください。複数ある場合はカンマ区切り。"
-      placeholder: "例: trade, finance"
-    validations:
-      required: false
 
   - type: textarea
     id: description
     attributes:
       label: "不具合の内容"
-      description: "問題の概要を簡潔に説明してください。"
-      placeholder: |
-        例：
-        - metadata.yaml の構文エラーが発生する
-        - generate_index.py 実行時にリンクが壊れる
+      description: "発生した現象やエラーメッセージをできるだけ詳しく記載してください。"
+      placeholder: "例：`validate_metadata.py` で YAML パースエラーが発生しました。"
     validations:
       required: true
 
@@ -64,50 +38,31 @@ body:
     id: steps
     attributes:
       label: "再現手順"
-      description: "不具合を再現するための手順を順に記載してください。"
+      description: "不具合が発生するまでの手順を記載してください。"
       placeholder: |
-        1. 該当フォルダで `python tools/validate_metadata.py` を実行
-        2. エラーが発生
-        3. エラーメッセージ内容：
-           ```
-           KeyError: 'data_sources'
-           ```
-    validations:
-      required: true
-
-  - type: input
-    id: environment
-    attributes:
-      label: "使用環境（任意）"
-      description: "利用環境やバージョン情報を記載してください。"
-      placeholder: "例: macOS 14 / Python 3.11 / Jupyter Notebook"
+        1. 環境をセットアップする
+        2. `python tools/validate_metadata.py` を実行
+        3. エラーが発生する
     validations:
       required: false
 
   - type: textarea
-    id: expected
+    id: env
     attributes:
-      label: "期待する動作（任意）"
-      description: "本来どのような動作になるべきだったかを記載してください。"
-      placeholder: "例：validate_metadata.py が正常終了し、エラーが出ない"
+      label: "実行環境"
+      description: "環境情報を記載してください。"
+      placeholder: |
+        - OS: Ubuntu 22.04
+        - Python: 3.11
+        - ライブラリ: pyyaml 6.0.2, pandas 2.2.2
     validations:
       required: false
-
-  - type: checkboxes
-    id: confirmations
-    attributes:
-      label: "確認事項"
-      options:
-        - label: "再現手順を自分の環境で確認した"
-          required: true
-        - label: "CODE_OF_CONDUCT.md に同意する"
-          required: true
 
   - type: textarea
     id: notes
     attributes:
-      label: "補足（任意）"
-      description: "エラーログ、スクリーンショット、補足情報があれば記載してください。"
-      placeholder: "例：Python 3.12 では再現しませんでした。"
+      label: "補足情報"
+      description: "再現条件や関連するファイルなどがあれば記載してください。"
+      placeholder: "例：GitHub Actions の特定バージョンでのみ発生します。"
     validations:
       required: false
