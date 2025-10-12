@@ -1,0 +1,48 @@
+title: "家計調査と小売物価統計調査"
+author: "well_living_ry"
+date: "20251024"
+domain: "household"
+slug: "202510-well_living_ry-kakei-kouri"
+data_sources:
+  - name: "家計調査結果"
+    provider: "総務省統計局"
+    url: "http://www.stat.go.jp/data/kakei/index.htm"
+    terms_of_use: >
+      統計データを引用・転載する場合には、出典を記載してください。出典を編集・加工等して利用した場合はその旨も明記してください。
+      詳しくは 利用規約 (https://www.stat.go.jp/info/riyou.html) を参照してください。
+      （出典記入例）
+        ・「家計調査結果」（総務省統計局）（当該ページのURL）（○年○月○日に利用）
+        ・「家計調査結果」（総務省統計局）（当該ページのURL）を加工して作成
+      https://www.stat.go.jp/data/kakei/inyou.html
+  - name: "小売物価統計調査結果"
+    provider: "総務省統計局"
+    url: "http://www.stat.go.jp/data/kouri/index.htm"
+    terms_of_use: >
+      統計データ，図表を利用する場合は，出典を記載する。
+      編集・加工等して利用する場合は、その旨も明記する。
+      （記載例）
+      「小売物価統計調査結果」(総務省統計局)
+      「総務省(小売物価統計調査)」
+      「総務省(小売物価統計調査)結果より、番組で独自計算」　など
+      https://www.stat.go.jp/data/kouri/doukou/2.html
+  - name: "消費者物価指数（CPI）"
+    provider: "総務省統計局"
+    url: "http://www.stat.go.jp/data/cpi/index.htm"
+    terms_of_use: >
+      ※　本統計のデータを引用・転載する場合には、出典（総務省「消費者物価指数」）の表記をお願いします。
+      ※　著作権については、「サイトの利用について」をご覧ください。
+      https://www.stat.go.jp/info/riyou.html
+code_license: "MIT"
+links:
+  - label: "note"
+    url: "https://note.com/well_living_ry/n/n6b4184e169cd"
+  - label: "書籍"
+    url: "https://www.kodansha.co.jp/book/products/0000419304"
+description: >
+  総務省統計局の家計調査、小売物価統計調査および消費者物価指数をPythonのPlotlyで可視化。
+  食料、勤め先収入、米、コーヒーなどの消費支出や物価動向を比較して分析。
+tags:
+  - household
+  - cpi
+  - plotly
+  - python
