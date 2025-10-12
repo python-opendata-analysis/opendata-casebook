@@ -1,0 +1,103 @@
+name: "🛠️ Improvement / 修正・提案"
+description: "既存の事例、テンプレート、ドキュメント、または運用全般に関する改善提案を投稿するためのテンプレート"
+title: "Improve: <簡単な概要>"
+labels:
+  - "improvement"
+  - "triage"
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        💡 改善・提案ありがとうございます。  
+        ご提案の内容は CODEOWNERS（運営チーム）が確認のうえ、適宜議論・対応します。
+
+        ⚠️ **注意:**  
+        - 統計データやファイルを直接アップロードしないでください。  
+        - 公的統計データを扱う場合は、API や公式サイトへの参照を記載する形で提案してください。
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: "改善対象の種類"
+      description: "どの領域に関する提案かを選んでください。"
+      options:
+        - 既存の事例（casebook）
+        - テンプレート（_template）
+        - ツールや共通コード（tools）
+        - ドキュメント（README, CONTRIBUTING など）
+        - その他（運用・構成など）
+    validations:
+      required: true
+
+  - type: input
+    id: target
+    attributes:
+      label: "対象（任意）"
+      description: "該当するファイル・ディレクトリ・ページなどがあればパスまたはURLを記載してください。"
+      placeholder: "例: casebook/household/202510-well_living_ry-kakei-kouri/README.md"
+    validations:
+      required: false
+
+  - type: input
+    id: domain
+    attributes:
+      label: "関連分野（任意）"
+      description: "特定の分野（casebook 下のカテゴリ）に関係する場合は記載してください。複数ある場合はカンマ区切り。"
+      placeholder: "例: household, finance"
+    validations:
+      required: false
+
+  - type: textarea
+    id: current
+    attributes:
+      label: "現状・課題"
+      description: "現在の状況や問題点を具体的に説明してください。"
+      placeholder: |
+        例：
+        - README の構成が他カテゴリと異なる
+        - metadata.yaml の項目順が不統一
+        - CONTRIBUTING.md の説明が分かりづらい
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: "提案内容"
+      description: "どのように改善すべきか、具体的な提案を記載してください。"
+      placeholder: |
+        例：
+        - README に共通の構成を定義して統一
+        - metadata.yaml に data_sources を上位に配置
+    validations:
+      required: true
+
+  - type: textarea
+    id: rationale
+    attributes:
+      label: "背景・目的（任意）"
+      description: "提案の意図や期待する効果があれば記載してください。"
+      placeholder: "例：利用者が統一的な形式で参照・再利用できるようにするため。"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: "確認事項"
+      options:
+        - label: "提案内容が著作権や利用規約に抵触しないことを確認した"
+          required: true
+        - label: "CODE_OF_CONDUCT.md に同意する"
+          required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: "補足（任意）"
+      description: "運営への補足、参考資料、関連Issue/PRなどがあれば記載してください。"
+      placeholder: "例）Zenn記事の構成を参考にしています。"
+    validations:
+      required: false

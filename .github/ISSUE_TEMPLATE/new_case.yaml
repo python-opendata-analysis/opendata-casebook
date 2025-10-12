@@ -1,0 +1,147 @@
+name: "🆕 New case (事例の追加)"
+description: "casebook/{domain}/{slug}/ に新しい事例（コード or リンク）を追加するためのテンプレート"
+title: "Add case: <YYYYMM-author-topic>"
+labels:
+  - "new case"
+  - "triage"
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        🎉 新しい事例の投稿ありがとうございます。  
+        提示された内容をもとに CODEOWNERS（運営チーム）が確認します。  
+
+        ⚠️ **注意:**  
+        - 公的統計データは直接アップロードせず、APIや公式サイトから再取得できる形にしてください。  
+        - 出典・利用規約を正確に確認し、`metadata.yaml` に記載してください。  
+
+  - type: input
+    id: slug
+    attributes:
+      label: "Slug（ディレクトリ名）"
+      description: "形式: `YYYYMM-author-topic`（例: `202510-well_living_ry-kakei-kouri`）"
+      placeholder: "202510-yourname-topic"
+    validations:
+      required: true
+
+  - type: input
+    id: domain
+    attributes:
+      label: "Domain（分野・区分）"
+      description: "casebook 配下のカテゴリ名を記載してください。複数ある場合はカンマ区切り。"
+      placeholder: "例: household, economy"
+    validations:
+      required: true
+
+  - type: input
+    id: author
+    attributes:
+      label: "Author（投稿者名 / アカウント名）"
+      description: "GitHub / note / Zenn など、公開に使用するアカウント名を記載してください。"
+      placeholder: "your_name_or_account"
+    validations:
+      required: true
+
+  - type: input
+    id: date
+    attributes:
+      label: "Date（作成年月日）"
+      description: "形式: `YYYYMMDD`（例: 20251024）。metadata.yaml の `date` と一致させてください。"
+      placeholder: "YYYYMMDD"
+    validations:
+      required: true
+
+  - type: textarea
+    id: links
+    attributes:
+      label: "関連リンク（任意）"
+      description: "note / Zenn / Qiita / 書籍など。1 行に 1 件。"
+      placeholder: |
+        - note: https://note.com/...
+        - zenn: https://zenn.dev/...
+        - book: https://...
+    validations:
+      required: false
+
+  - type: textarea
+    id: data_sources
+    attributes:
+      label: "Data sources（出典・利用規約）"
+      description: >
+        Notebook や記事で利用する統計・オープンデータの出典を YAML 形式で記載してください。
+        必ず公式URL（例: stat.go.jp）と、利用規約や出典記載ルールの要点を含めてください。
+        各データの出典・利用条件を一次情報に基づいて正確に記載する責任は投稿者にあります。
+      render: yaml
+      placeholder: |
+        data_sources:
+          - name: ""
+            provider: ""
+            url: ""
+            terms_of_use: >
+              （利用条件の要点を記載。例：「出典明記を要する」「加工時は明記」など）
+              利用規約URL:
+    validations:
+      required: true
+
+  - type: textarea
+    id: licenses
+    attributes:
+      label: "Licenses（ライセンス）"
+      description: "コードやNotebookなど、投稿内容に適用するライセンスを記載してください。metadata.yaml にも反映されます。"
+      render: yaml
+      placeholder: |
+        code_license: "MIT"
+        # notebook_license: "CC BY 4.0"   # 任意。文章・図版に適用する場合のみ
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: "短い概要（任意）"
+      description: "README 冒頭に掲載する 2～3 行の要約。未記入でも構いません。"
+      placeholder: "本事例では、〇〇の公的統計を用いて △△ を可視化・比較します。"
+    validations:
+      required: false
+
+  - type: textarea
+    id: files
+    attributes:
+      label: "追加・変更ファイル一覧"
+      description: "今回の追加・変更内容を相対パスで記載してください。"
+      render: text
+      placeholder: |
+        casebook/{domain}/{slug}/README.md
+        casebook/{domain}/{slug}/metadata.yaml
+        casebook/{domain}/{slug}/分析ノート.ipynb
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: "確認事項"
+      options:
+        - label: "ディレクトリが `casebook/{domain}/{slug}/` 構成になっている"
+          required: true
+        - label: "`metadata.yaml` に data_sources（出典・利用規約）を正確に記載した"
+          required: true
+        - label: "外部データファイルを含んでいない（APIなどで再取得できる形式）"
+          required: true
+        - label: "Notebook は保存前にカーネルをリスタートし、不要な実行結果を削除した"
+          required: true
+        - label: "著作権・ライセンス条件を確認し、問題がない"
+          required: true
+        - label: "CODE_OF_CONDUCT.md に同意する"
+          required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: "補足（任意）"
+      description: "レビューにあたっての留意点、補足説明、背景などがあれば記載してください。"
+      placeholder: "例）e-Stat APIキーは環境変数から取得。Notebook内ではダミー値を使用。"
+    validations:
+      required: false
