@@ -93,10 +93,6 @@ def validate_one(path: Path, schema) -> list[str]:
         if not link.get("url") or not URL_RE.match(link["url"]):
             errors.append(f"[Rule] {path}: links[{i}].url が不正です（http(s) で始まる URL を指定）。")
 
-    # language: "ja" or "en" 等。空は許容しない
-    if not meta.get("language"):
-        errors.append(f"[Rule] {path}: language を指定してください（例: ja, en）。")
-
     # code_license: 必須
     if not meta.get("code_license"):
         errors.append(f"[Rule] {path}: code_license を指定してください（例: MIT）。")
