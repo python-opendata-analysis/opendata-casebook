@@ -6,7 +6,7 @@ slug: "202510-well_living_ry-kakei-kouri"
 data_sources:
   - name: "家計調査結果"
     provider: "総務省統計局"
-    url: "http://www.stat.go.jp/data/kakei/index.htm"
+    url: "https://www.stat.go.jp/data/kakei/index.htm"
     terms_of_use: >
       統計データを引用・転載する場合には、出典を記載してください。出典を編集・加工等して利用した場合はその旨も明記してください。
       詳しくは 利用規約 (https://www.stat.go.jp/info/riyou.html) を参照してください。
@@ -16,7 +16,7 @@ data_sources:
       https://www.stat.go.jp/data/kakei/inyou.html
   - name: "小売物価統計調査結果"
     provider: "総務省統計局"
-    url: "http://www.stat.go.jp/data/kouri/index.htm"
+    url: "https://www.stat.go.jp/data/kouri/index.htm"
     terms_of_use: >
       統計データ，図表を利用する場合は，出典を記載する。
       編集・加工等して利用する場合は、その旨も明記する。
@@ -27,7 +27,7 @@ data_sources:
       https://www.stat.go.jp/data/kouri/doukou/2.html
   - name: "消費者物価指数（CPI）"
     provider: "総務省統計局"
-    url: "http://www.stat.go.jp/data/cpi/index.htm"
+    url: "https://www.stat.go.jp/data/cpi/index.htm"
     terms_of_use: >
       ※　本統計のデータを引用・転載する場合には、出典（総務省「消費者物価指数」）の表記をお願いします。
       ※　著作権については、「サイトの利用について」をご覧ください。
