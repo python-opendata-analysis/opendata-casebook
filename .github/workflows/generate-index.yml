@@ -1,0 +1,43 @@
+name: Generate Index (Manual)
+
+# 手動実行のみ
+on:
+  workflow_dispatch:
+
+jobs:
+  generate-index:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pyyaml
+    
+    - name: Generate CASE_INDEX.md
+      run: |
+        python tools/generate_index.py > CASE_INDEX.md
+    
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: case-index
+        path: CASE_INDEX.md
+        retention-days: 7
+    
+    - name: Show instructions
+      run: |
+        echo "✓ CASE_INDEX.md が生成されました"
+        echo ""
+        echo "次のステップ："
+        echo "1. Actionsタブから 'case-index' アーティファクトをダウンロード"
+        echo "2. ローカルで確認"
+        echo "3. 問題なければコミット・プッシュ"

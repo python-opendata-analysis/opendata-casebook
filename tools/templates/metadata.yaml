@@ -1,0 +1,24 @@
+title: ""
+author: ""              # GitHub / note / Zenn などの公開アカウント名
+date: "YYYYMMDD"        # 例: 20251024
+domain: ""              # 例: household
+slug: "YYYYMM-author-topic"   # 例: 202510-yourname-topic
+
+data_sources:
+  - name: ""
+    provider: ""
+    url: ""
+    terms_of_use: >
+      （利用条件の要点を記載。例：「出典明記」「加工時は明記」。規約URLも記載）
+
+code_license: "MIT"
+# notebook_license: "CC BY 4.0"   # 任意（Notebook本文・解説を含む場合）
+
+links: []               # 例: [{label: "note", url: "https://..." }]
+language: "ja"
+
+# 任意（一覧・検索向けの2〜3行）
+description: >
+  （任意。README に詳細を書く場合は省略可）
+
+tags: []                # 例: ["household", "CPI", "Python"]

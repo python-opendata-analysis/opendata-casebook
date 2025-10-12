@@ -51,12 +51,13 @@
 │
 ├─ .github/                 # GitHub 用設定
 │  ├─ ISSUE_TEMPLATE/
-│  ├─ PULL_REQUEST_TEMPLATE.md
-│  ├─ CODE_OF_CONDUCT.md
-│  └─ CONTRIBUTING.md
+│  └─ PULL_REQUEST_TEMPLATE.md
 │
 ├─ CASE_INDEX.md            # 自動生成される全事例一覧
-└─ README.md                # このファイル
+├─ requirements_book.txt    # 書籍で用いられるライブラリ
+├─ README.md                # このファイル
+├─ CODE_OF_CONDUCT.md
+└─ CONTRIBUTING.md
 ````
 
 ---
@@ -108,7 +109,7 @@ note / Zenn / Qiita などの外部記事のリンクのみを紹介する場合
 
 ---
 
-## 💬 コミュニティと連絡
+## 💬 運営と連絡
 
 リポジトリに関する質問や提案は、以下の方法で受け付けています。
 
