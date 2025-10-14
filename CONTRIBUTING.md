@@ -20,6 +20,8 @@ casebook/{domain}/{slug}/
 | **domain** | 分析対象分野 | `population`, `household`, `living`, `industry`, `trade`, `economy`, `finance`, `health`, `education`, `environment`, `region`, `common`, `event` |
 | **slug** | 一意な識別子（`YYYYMM-author-topic` 推奨） | `202510-yourname-householdanalysis` |
 
+authorはアカウント名でも表示名でもよくGitHubでも他のSNSでの名称でも構いません。
+
 ---
 
 ## 📂 新しい事例を追加する手順
@@ -37,7 +39,7 @@ cp -r casebook/_template casebook/{domain}/{slug}
 | ---------------------- | ----------------------------------- |
 | `README.md`            | 分析の概要・目的・主要な手法・データ取得手順（任意）          |
 | `metadata.yaml`        | タイトル、分野、著者、日付、データ出典、ライセンス、リンク、要約、タグ |
-| `*.ipynb` または `*.py`   | 再現可能な分析コード                          |
+| `*.ipynb` または `*.py`   | 再現可能な分析コード。なお、Python以外のプログラミング言語も可です。   |
 | `requirements.txt`（任意） | 必要なライブラリを記載                         |
 
 > Notebook は保存前に **カーネルをリスタートし、出力を全てクリア** してください。
@@ -164,7 +166,7 @@ python tools/generate_index.py > CASE_INDEX.md
 レビューでは **分析内容の正否ではなく構成と公開適正を確認** します。
 
 * `metadata.yaml` の出典・利用規約が正しいか
-* 公的統計やオープンデータのライセンス条件に従っているか
+* 公的統計やオープンデータのライセンス条件に従っているか(詳細にではなくリンクが正しいかなどのみ確認します)
 * ファイル構成・命名がルールに沿っているか
 * 不要な実行結果や容量の大きいデータを含まないか
 * CODE_OF_CONDUCT.md に反していないか
