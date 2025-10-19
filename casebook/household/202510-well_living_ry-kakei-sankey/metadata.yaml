@@ -2,7 +2,7 @@ title: "家計調査サンキーダイアグラム"
 author: "well_living_ry"
 date: "20251024"
 domain: "household"
-slug: "202510-well_living_ry-kakei-kouri"
+slug: "202510-well_living_ry-kakei-sankey"
 data_sources:
   - name: "家計調査結果"
     provider: "総務省統計局"
