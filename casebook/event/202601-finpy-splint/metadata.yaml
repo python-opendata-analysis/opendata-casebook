@@ -7,11 +7,11 @@
 # ---------------------------------------
 # 基本情報
 # ---------------------------------------
-title: "（例）家計調査と小売物価統計調査"
-author: "your_name_or_account"
-date: "YYYYMMDD"                      # 例: 20251024
-domain: "household"                   # 例: population / household / economy / industry / region / event / common
-slug: "YYYYMM-author-topic"
+title: "fin-py【スプリント】Pythonではじめるオープンデータ分析"
+author: "well-living"
+date: "20260111"                      # 例: 20251024
+domain: "event"                   # 例: population / household / economy / industry / region / event / common
+slug: "202601-well-living-fin-py-sprint"
 
 # ---------------------------------------
 # データ出典情報
@@ -72,7 +72,5 @@ description: >
 # Notebookや事例検索用。小文字英単語を推奨。
 # ---------------------------------------
 tags:
-  - household
-  - cpi
-  - plotly
-  - python
+  - estat
+  - gbizinfo
