@@ -1,0 +1,78 @@
+# metadata.yaml (template)
+# ============================================================
+# Open Data Casebook 向けメタデータテンプレート
+# - Notebook内のデータソース情報と整合させること
+# ============================================================
+
+# ---------------------------------------
+# 基本情報
+# ---------------------------------------
+title: "（例）家計調査と小売物価統計調査"
+author: "your_name_or_account"
+date: "YYYYMMDD"                      # 例: 20251024
+domain: "household"                   # 例: population / household / economy / industry / region / event / common
+slug: "YYYYMM-author-topic"
+
+# ---------------------------------------
+# データ出典情報
+# Notebook内の source_name, source_url と一致させてください。
+# 各データごとに name / provider / url / terms_of_use を記載します。
+# ---------------------------------------
+data_sources:
+  - name: "（例）家計調査結果"
+    provider: "総務省統計局"
+    url: "http://www.stat.go.jp/data/kakei/index.htm"
+    terms_of_use: >
+      統計データを引用・転載する場合には、出典を記載してください。
+      出典を編集・加工等して利用した場合はその旨も明記してください。
+      詳しくは 利用規約 (https://www.stat.go.jp/info/riyou.html) を参照。
+      （出典記入例）
+        ・「家計調査結果」（総務省統計局）（当該ページのURL）（○年○月○日に利用）
+        ・「家計調査結果」（総務省統計局）（当該ページのURL）を加工して作成
+      https://www.stat.go.jp/data/kakei/inyou.html
+
+  - name: "（例）消費者物価指数（CPI）"
+    provider: "総務省統計局"
+    url: "http://www.stat.go.jp/data/cpi/index.htm"
+    terms_of_use: >
+      本統計のデータを引用・転載する場合には、
+      出典（総務省「消費者物価指数」）の表記を行ってください。
+      著作権等の詳細は「サイトの利用について」を参照。
+      https://www.stat.go.jp/info/riyou.html
+
+# ---------------------------------------
+# 🧭 ライセンス
+# code_license は必須（例: MIT）
+# その他のライセンス: xxx_license は任意（文章・図版を含む場合など）
+# ---------------------------------------
+code_license: "MIT"
+# xxx_license: "CC BY 4.0"
+
+# ---------------------------------------
+# 🔗 関連リンク
+# note / Zenn / Qiita / GitHubなど
+# ---------------------------------------
+links:
+  - label: "note"
+    url: "https://note.com/your_article"
+  - label: "GitHub"
+    url: "https://github.com/your_account/your_repo"
+
+# ---------------------------------------
+# 📝 概要（任意）
+# 一覧や検索での要約として2〜3行程度を記載します。
+# READMEに詳細を記載する場合は省略可。
+# ---------------------------------------
+description: >
+  （任意）家計・小売物価・CPI を用いて支出と物価の関係を可視化。
+  Python（Plotly）で主要項目の推移を比較。
+
+# ---------------------------------------
+# 🏷 タグ
+# Notebookや事例検索用。小文字英単語を推奨。
+# ---------------------------------------
+tags:
+  - household
+  - cpi
+  - plotly
+  - python
