@@ -9,8 +9,8 @@
 # ---------------------------------------
 title: "fin-py【スプリント】Pythonではじめるオープンデータ分析"
 author: "fin_py"
-date: "20260111"                      # 例: 20251024
-domain: "event"                   # 例: population / household / economy / industry / region / event / common
+date: "20260111"
+domain: "event" 
 slug: "202601-fin_py-sprint"
 
 # ---------------------------------------
@@ -19,6 +19,14 @@ slug: "202601-fin_py-sprint"
 # 各データごとに name / provider / url / terms_of_use を記載します。
 # ---------------------------------------
 data_sources:
+  - name: "家計調査結果"
+    provider: "総務省統計局"
+    url: "http://www.stat.go.jp/data/kakei/index.htm"
+    terms_of_use: >
+      統計データを引用・転載する場合には、出典を記載してください。
+      出典を編集・加工等して利用した場合はその旨も明記してください。
+      詳しくは 利用規約 (https://www.stat.go.jp/info/riyou.html) を参照。
+      https://www.stat.go.jp/data/kakei/inyou.html
   - name: "gBizINFO"
     provider: "経済産業省"
     url: "https://info.gbiz.go.jp/index.html"
@@ -28,16 +36,28 @@ data_sources:
       https://www.meti.go.jp/main/rules.html
 
 # ---------------------------------------
-# 🧭 ライセンス
+# ライセンス
 # code_license は必須（例: MIT）
 # その他のライセンス: xxx_license は任意（文章・図版を含む場合など）
 # ---------------------------------------
 code_license: "MIT"
 
 # ---------------------------------------
-# 🏷 タグ
+# 関連リンク
+# note / Zenn / Qiita / GitHubなど
+# ---------------------------------------
+links:
+  - label: "GitHub"
+    url:  >
+      https://github.com/drillan/e-stat-mcp/tree/main
+      https://github.com/tkoyama010/awesome-plateau/tree/feature/viewpoint-from-solacity-to-fuji
+
+
+# ---------------------------------------
+# タグ
 # Notebookや事例検索用。小文字英単語を推奨。
 # ---------------------------------------
 tags:
+  - python
   - estat
   - gbizinfo
