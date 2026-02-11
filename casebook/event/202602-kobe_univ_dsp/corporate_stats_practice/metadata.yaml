@@ -10,8 +10,8 @@
 title: "クラウド会計データと経済センサスの比較分析"
 author: "kubo_takashi"
 date: "20260212"                      
-domain: "industry"                
-slug: "202602-kubo_takashi-corporate_stats_practice"
+domain: "event"                
+slug: "corporate_stats_practice"
 
 # ---------------------------------------
 # データ出典情報
@@ -35,7 +35,7 @@ data_sources:
 
   - name: "マネーフォワード クラウド会計の統計データ"
     provider: "マネーフォワード株式会社"
-    url: ""
+    url: "https://corp.moneyforward.com/"
     terms_of_use: >
       本演習で使用するマネーフォワード クラウド会計の集計表は、
       内閣府「ビッグデータを活用した経済動向分析」のレポートに基づいて再現したものです。
