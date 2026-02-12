@@ -6,8 +6,9 @@
 
 ## 作者
 
-* 吉住遼
+* マネーフォワード総合研究所 吉住遼
   * [GitHub](https://github.com/well-living)
+* マネーフォワード総合研究所 久保隆史
 
 ---
 
@@ -50,4 +51,3 @@
 ## ライセンス
 
 * コード：MIT License
-* Notebook・本文（任意）：CC BY 4.0
