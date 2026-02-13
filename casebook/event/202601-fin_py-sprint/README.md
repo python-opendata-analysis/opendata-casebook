@@ -107,13 +107,31 @@ e-Stat, gBizINFOなど書籍で紹介されているデータやその他の公�
 
 ---
 
-## ファイル構成（任意）
+## 成果
 
-```text
-{{ slug }}/
-├─ {{ title }}.ipynb     # Notebook（分析コード・可視化）
-├─ metadata.yaml          # メタデータ（出典・ライセンス情報など）
-└─ README.md              # このファイル
-```
+### どりらん
 
+- [Spec Kit](https://github.com/github/spec-kit) によるe-statのMCP
+- https://github.com/drillan/e-stat-mcp
+
+---
+
+### こてつ（tkoyama010）
+
+PLATEAUとPyVistaで会場オフィスからの景色を作成する
+
+- zenn: [国土交通データプラットフォーム MCP サーバーが出てた](https://zenn.dev/rescuenow/articles/ff5dca69861b94)
+- [設計のPR](https://github.com/tkoyama010/shakkei/pull/1)
+- [ttyd](https://github.com/tsl0922/ttyd)
+
+成果物
+
+- https://github.com/tkoyama010/shakkei
+
+---
+
+### takashi815
+
+
+### well-living-ry
 
