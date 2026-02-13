@@ -26,7 +26,8 @@
 |---------|------------|-----------|------------|
 | 家計調査結果 | 総務省統計局 | https://www.stat.go.jp/data/kakei/index.htm | [引用・転載について](https://www.stat.go.jp/data/kakei/inyou.html) |
 
-詳細は[metadata.yaml](https://github.com/python-opendata-analysis/opendata-casebook/blob/main/casebook/household/202510-well_living_ry-kakei-kouri/metadata.yaml)に記載
+- 詳細は[metadata.yaml](https://github.com/python-opendata-analysis/opendata-casebook/blob/main/casebook/household/202510-well_living_ry-kakei-kouri/metadata.yaml)に記載
+
 ---
 
 ## ライセンス
