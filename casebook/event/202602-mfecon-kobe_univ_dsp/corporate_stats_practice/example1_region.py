@@ -46,6 +46,8 @@ region_data = {
 df_cloud = pd.DataFrame(region_data)
 
 # Downloads から CSV を読み込む
+#  「令和3年経済センサス-活動調査 / 企業等に関する集計 / 産業横断的集計 / 経理事項等（表番号：7）」
+#  （総務省統計局）（https://www.e-stat.go.jp/dbview?sid=0004006333）を加工して作成
 csv_path = Path.home() / "Downloads" / "estat_census_region.csv"
 df_census = pd.read_csv(csv_path, encoding='shift_jis')
 

@@ -5,6 +5,9 @@ import pandas as pd
 from pathlib import Path
 
 # Read CSV from Downloads
+#  Created by processing the data from the following source:
+#  2021 Economic Census for Business Activity / Tabulation of Enterprises, etc. / Tabulation across Industries / Financial Items, etc.
+#  Table number: 1（https://www.e-stat.go.jp/en/dbview?sid=0004006328）
 csv_path = Path.home() / "Downloads" / "sample_estat_en.csv"
 
 df = pd.read_csv(csv_path, encoding='shift_jis')
