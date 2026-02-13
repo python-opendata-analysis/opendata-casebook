@@ -21,7 +21,7 @@ slug: "202601-fin_py-sprint"
 data_sources:
   - name: "家計調査結果"
     provider: "総務省統計局"
-    url: "http://www.stat.go.jp/data/kakei/index.htm"
+    url: "https://www.stat.go.jp/data/kakei/index.htm"
     terms_of_use: >
       統計データを引用・転載する場合には、出典を記載してください。
       出典を編集・加工等して利用した場合はその旨も明記してください。
