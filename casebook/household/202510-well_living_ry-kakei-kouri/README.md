@@ -28,7 +28,7 @@
 | 小売物価統計調査結果 | 総務省統計局 | https://www.stat.go.jp/data/kouri/index.htm | [利用上の注意](https://www.stat.go.jp/data/kouri/doukou/2.html) |
 | 消費者物価指数（CPI） | 総務省統計局 | https://www.stat.go.jp/data/cpi/index.htm | [サイトの利用について](https://www.stat.go.jp/info/riyou.html) |
 
-詳細は[metadata.yaml](https://github.com/python-opendata-analysis/opendata-casebook/blob/main/casebook/household/202510-well_living_ry-kakei-kouri/metadata.yaml)に記載
+- 詳細は[metadata.yaml](https://github.com/python-opendata-analysis/opendata-casebook/blob/main/casebook/household/202510-well_living_ry-kakei-kouri/metadata.yaml)に記載
 ---
 
 ## ライセンス
