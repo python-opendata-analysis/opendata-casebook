@@ -5,6 +5,8 @@ import pandas as pd
 from pathlib import Path
 
 # Downloads から CSV を読み込む
+#  「令和3年経済センサス-活動調査 / 企業等に関する集計 / 産業横断的集計 / 経理事項等（表番号：1）」
+#  （総務省統計局）（https://www.e-stat.go.jp/dbview?sid=0004006328）を加工して作成
 csv_path = Path.home() / "Downloads" / "sample_estat.csv"
 
 df = pd.read_csv(csv_path, encoding='shift_jis')

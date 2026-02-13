@@ -37,6 +37,9 @@ industry_data = {
 df_cloud = pd.DataFrame(industry_data)
 
 # Read CSV from Downloads
+#  Created by processing the data from the following source:
+#  2021 Economic Census for Business Activity / Tabulation of Enterprises, etc. / Tabulation across Industries / Financial Items, etc.
+#  Table number: 6（https://www.e-stat.go.jp/en/dbview?sid=0004006361）
 csv_path = Path.home() / "Downloads" / "estat_census_industry_en.csv"
 df_census = pd.read_csv(csv_path, encoding='shift_jis')
 
